@@ -1,9 +1,7 @@
 import { getAllPosts } from "@/lib/posts";
 import Link from "next/link";
-import { redirect } from "next/navigation";
 
 export default function Home() {
-  
   const posts = getAllPosts();
 
   return (
@@ -26,11 +24,23 @@ export default function Home() {
         </ul>
       </aside>
 
-      {/* Placeholder until a post is chosen */}
-      <main className="flex-1 p-10 flex items-center justify-center">
-        <h1 className="text-2xl text-gray-400">
-          👈 Select a blog post from the sidebar
+      {/* Landing page */}
+      <main className="flex-1 flex flex-col items-center justify-center p-10 text-center">
+        <h1 className="text-4xl font-bold mb-4">
+          Welcome to <span className="text-[#50ffff]">My Blog</span>
         </h1>
+        <p className="text-lg text-gray-400 max-w-xl mb-8">
+          Thoughts, tutorials, and stories about web development, Next.js, and
+          everything in between.
+        </p>
+        {posts.length > 0 && (
+          <Link
+            href={`/posts/${posts[0].slug}`}
+            className="px-6 py-3 rounded-lg bg-[#50ffff] text-black font-semibold hover:bg-[#3edcdc] transition"
+          >
+            🚀 Start Reading
+          </Link>
+        )}
       </main>
     </div>
   );
