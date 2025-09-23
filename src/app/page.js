@@ -41,8 +41,8 @@ export default function Home() {
         {/* Subtitle */}
         <p className="text-lg md:text-xl text-gray-400 max-w-2xl mb-10 leading-relaxed">
           Thoughts, tutorials, and stories about{" "}
-          <span className="text-[#50ffff] font-medium">web development</span>,{" "}
-          <span className="text-[#50ffff] font-medium">Next.js</span>, and
+          <span className="text-[#50ffff] font-medium">Me</span>,{" "}
+          <span className="text-[#50ffff] font-medium">my work</span>, and
           everything in between.
         </p>
 
